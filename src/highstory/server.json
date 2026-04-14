@@ -12,7 +12,7 @@
     {
       "registryType": "npm",
       "identifier": "highstory-mcp",
-      "version": "1.0.2",
+      "version": "1.1.0",
       "transport": {
         "type": "stdio"
       },

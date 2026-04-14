@@ -1,19 +1,15 @@
 {
   "name": "highstory-mcp",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Local bridge for High Story MCP Cloud server",
   "main": "dist/index.js",
   "bin": {
     "highstory-mcp": "./dist/index.js"
   },
   "type": "module",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/7figures007/servers.git",
-    "directory": "src/highstory"
-  },
   "scripts": {
     "build": "tsc",
+    "setup": "node dist/setup.js",
     "start": "node dist/index.js",
     "prepublishOnly": "npm run build"
   },
