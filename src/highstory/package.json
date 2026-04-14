@@ -1,23 +1,37 @@
 {
-  "name": "@modelcontextprotocol/server-highstory",
-  "version": "1.0.0",
-  "description": "High Story MCP server for AI-driven social media automation",
-  "license": "MIT",
-  "type": "module",
+  "name": "highstory-mcp",
+  "version": "1.0.2",
+  "description": "Local bridge for High Story MCP Cloud server",
+  "main": "dist/index.js",
   "bin": {
-    "mcp-server-highstory": "dist/index.js"
+    "highstory-mcp": "./dist/index.js"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/7figures007/servers.git",
+    "directory": "src/highstory"
   },
   "scripts": {
-    "build": "tsc && shx chmod +x dist/index.js",
-    "prepare": "npm run build"
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build"
   },
+  "keywords": [
+    "mcp",
+    "modelcontextprotocol",
+    "highstory",
+    "ai"
+  ],
+  "author": "7figures007",
+  "license": "MIT",
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.26.0",
-    "zod": "^3.25.0"
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "dotenv": "^17.2.3"
   },
   "devDependencies": {
-    "@types/node": "^22.10.2",
-    "shx": "^0.3.4",
-    "typescript": "^5.6.2"
-  }
+    "@types/node": "^22.5.5",
+    "typescript": "^5.5.3"
+  },
+  "mcpName": "io.github.7figures007/highstory-mcp"
 }
